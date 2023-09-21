@@ -30,3 +30,17 @@ void free_person(Person *person) {
     free(person);
 }
 
+// int sort_age(Person A, Person B)
+// {
+//     return A.age - B.age;
+// }
+
+// int sort_name(Person A, Person B)
+// {
+//     return strcmp(A.name, B.name);
+// }
+
+// Person ** sort_persons(Person **person_array, int size, comparison_fct fct)
+// {
+    
+// }
