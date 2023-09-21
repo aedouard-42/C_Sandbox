@@ -26,6 +26,13 @@
         
     } House;
 
+    typedef struct s_list
+    {
+        void            *content;
+        struct s_list   *next;
+    } t_list;
+    
+
     /*fonctions*/
 
     bool ft_is_palindrom(char *str);
@@ -38,5 +45,13 @@
     Person  **sort_persons(Person **person_array, int size, comparison_fct fct);
     int sort_age(void *a, void *b);
     int sort_name(void *a, void *b);
+
+    t_list *ft_lstnew(void *content);
+    void    ft_lstaddfront(t_list **head, t_list *new);
+    void    ft_lstaddback(t_list **head, t_list *new);
+    void    ft_lstiter(t_list *lst, void (*f)(void *));
+    void    ft_lstdelone(t_list *lst, void (*del)(void*));
+    void    ft_lstclear(t_list **head, void (*del)(void*));
+
 
  #endif

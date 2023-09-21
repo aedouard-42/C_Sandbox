@@ -27,12 +27,31 @@ void person_test()
     
 }
 
+void print_node_content(void *content)
+{
+    printf("le noeud contient : %d\n", *(int *)content);
+}
+
+void linked_list_test()
+{
+    int values[] = {12,5, 32,4};
+
+    t_list *head = ft_lstnew(&values[0]);
+    for (int i = 1; i < 4; i++)
+    {
+        ft_lstaddback(&head, ft_lstnew(&values[i]));
+    }
+    ft_lstiter(head, print_node_content);
+
+}
+
 int main(int ac, char** av)
 {
     (void)ac;(void)av;
 
     //palindrom_test("abcddcba");
-    person_test();
+    //person_test();
+    linked_list_test();
 
 
 }
