@@ -12,6 +12,7 @@
     typedef int (*comparison_fct) (void *, void *);
 
     /* structure*/
+
     typedef struct
     {
         int age;
@@ -25,22 +26,17 @@
         
     } House;
 
-
-
     /*fonctions*/
 
-    /*palindrom*/
     bool ft_is_palindrom(char *str);
 
-    /*Person*/
     void print_person(Person person);
     Person *create_person(int age, char *name);
     void update_person(Person *person, int age, char *name);
     void free_person(Person *person);
 
-
-
-
-
+    Person  **sort_persons(Person **person_array, int size, comparison_fct fct);
+    int sort_age(void *a, void *b);
+    int sort_name(void *a, void *b);
 
  #endif
